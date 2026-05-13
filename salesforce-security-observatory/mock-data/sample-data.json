@@ -1,0 +1,86 @@
+{
+  "sourceOrg": "ORG_XXXXX",
+  "scanReference": "SCAN_MOCK_001",
+  "scanStatus": "Completed",
+  "scanStartedAt": "2026-05-13T09:00:00Z",
+  "scanCompletedAt": "2026-05-13T09:02:00Z",
+  "metrics": [
+    {
+      "key": "users.total_active",
+      "label": "Active Users",
+      "category": "Users",
+      "value": 125,
+      "detailAvailable": true
+    },
+    {
+      "key": "connected_apps.total",
+      "label": "Connected Applications",
+      "category": "Connected Apps",
+      "value": 42,
+      "detailAvailable": true
+    },
+    {
+      "key": "oauth_tokens.active",
+      "label": "Active OAuth Tokens",
+      "category": "OAuth",
+      "value": 118,
+      "detailAvailable": true
+    },
+    {
+      "key": "auth_sessions.active",
+      "label": "Active Sessions",
+      "category": "Sessions",
+      "value": 76,
+      "detailAvailable": true
+    },
+    {
+      "key": "login_history.failed_recent",
+      "label": "Recent Failed Logins",
+      "category": "Logins",
+      "value": 7,
+      "detailAvailable": true
+    }
+  ],
+  "findings": [
+    {
+      "findingReference": "FINDING_MOCK_001",
+      "severity": "High",
+      "category": "OAuth",
+      "title": "Deactivated user has active OAuth token evidence",
+      "evidenceSummary": "[MOCKED DATA] Token relationship detected for an inactive user. Token value and user identity are not stored in this sample.",
+      "recommendation": "Review the user record and connected application access. Revoke token manually if confirmed as no longer required.",
+      "sourceObject": "OAuthToken",
+      "sourceRecordReference": "[REDACTED]",
+      "safeForPublicPortfolio": true
+    },
+    {
+      "findingReference": "FINDING_MOCK_002",
+      "severity": "Medium",
+      "category": "Connected Apps",
+      "title": "Connected application requires owner review",
+      "evidenceSummary": "[MOCKED DATA] Application exists without a confirmed business owner in the portfolio sample.",
+      "recommendation": "Confirm business owner, technical owner, access model and whether the application should be marked as paid, free or controlled.",
+      "sourceObject": "ConnectedApplication",
+      "sourceRecordReference": "[REDACTED]",
+      "safeForPublicPortfolio": true
+    }
+  ],
+  "drillDownExamples": [
+    {
+      "type": "Connected App",
+      "displayName": "MOCK_CONNECTED_APP_001",
+      "businessOwner": "[MOCKED DATA]",
+      "technicalOwner": "[MOCKED DATA]",
+      "status": "Review Required",
+      "sensitiveValuesExcluded": true
+    },
+    {
+      "type": "User Security",
+      "displayName": "MOCK_USER_001",
+      "functionalRole": "[MOCKED DATA]",
+      "status": "Inactive",
+      "sensitiveValuesExcluded": true
+    }
+  ],
+  "redactionNotice": "This sample is fully mocked. It does not contain real org IDs, usernames, emails, Salesforce record IDs, tokens, session identifiers, internal URLs, package licence keys or customer data."
+}
