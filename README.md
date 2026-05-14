@@ -17,7 +17,7 @@ Start here:
 
 1. Read the project summaries in `/projects`.
 2. Open the high-level portfolio diagram in `/diagrams`.
-3. Follow the project repository link where a standalone public repo exists.
+3. Follow a standalone project repository where one exists.
 4. Review the implementation boundary before reading any code or diagrams.
 
 ## Current Repository Map
@@ -28,10 +28,8 @@ salesforce-portfolio/
 ├── projects/
 │   ├── security-observatory.md
 │   └── slack-user-photo-sync.md
-├── diagrams/
-│   └── portfolio-overview.md
-└── salesforce-security-observatory/
-    └── README.md
+└── diagrams/
+    └── portfolio-overview.md
 ```
 
 ## Public Repositories
@@ -40,6 +38,7 @@ salesforce-portfolio/
 |---|---|---|
 | `salesforce-portfolio` | Cohesive public index and project narrative. | Active |
 | `sf-slack-userpics-to-salesforce` | Standalone redacted project repo for Slack-to-Salesforce profile photo synchronisation. | Active |
+| `sf-security-observatory` | Planned standalone redacted project repo for Salesforce Security Posture Observatory. | To be created |
 
 ## Publishing Standard
 
